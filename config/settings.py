@@ -32,7 +32,7 @@ except ImportError:
     DEBUG = False
     from django.core.management.utils import get_random_secret_key
     SECRET_KEY = get_random_secret_key()
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".pythonanywhere.com"]
 
 
 # Application definition
