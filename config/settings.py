@@ -28,11 +28,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 try:
     from .local_settings import *
     DEBUG = True
+    ALLOWED_HOSTS = []
+
 except ImportError:
     DEBUG = False
     from django.core.management.utils import get_random_secret_key
     SECRET_KEY = get_random_secret_key()
-ALLOWED_HOSTS = [".pythonanywhere.com"]
+    ALLOWED_HOSTS = [".pythonanywhere.com"]
 
 
 # Application definition
